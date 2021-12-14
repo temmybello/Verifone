@@ -13,7 +13,7 @@ Scenario: Vertone Registration
 	And I enter Last name "Hammer"
 	And I enter email "Temmywealthrise@gmail.com"
 	And I enter password "Homes121"
-	#And I click day 
+	And I click day 
 	#And I Select Month 
 	#And I Select Year 
 	And I click Sign up for our newsletter 

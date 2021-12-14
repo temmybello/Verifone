@@ -90,7 +90,7 @@ namespace Verifone.PageObject
 
         public void IEnterPassword(String PasswordText)
         {
-            Thread.Sleep(5000);
+            Thread.Sleep(3000);
             Password.SendKeys(PasswordText);
         }
 
