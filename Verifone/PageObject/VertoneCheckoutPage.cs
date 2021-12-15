@@ -25,9 +25,9 @@ namespace Verifone.PageObject
         IWebElement CustomerLastName => driver.FindElement(By.XPath("//*[@id='customer_lastname']"));
         IWebElement Email => driver.FindElement(By.XPath("//*[@id='email']"));
         IWebElement Password => driver.FindElement(By.XPath("//*[@id='passwd']"));
-        IWebElement Days => driver.FindElement(By.XPath("(//*[@class='form-control'])[1]"));
-        IWebElement Month => driver.FindElement(By.XPath("//*[@id='months']"));
-        IWebElement Years => driver.FindElement(By.XPath("//*[@id='years']"));
+        IWebElement SelectDays => driver.FindElement(By.XPath("(//*[@class='form-control'])[1]"));
+        IWebElement SelectMonth => driver.FindElement(By.XPath("//*[@id='months']"));
+        IWebElement SelectYears => driver.FindElement(By.XPath("//*[@id='years']"));
         IWebElement Newsletters => driver.FindElement(By.XPath("//*[@id='newsletter']"));
         IWebElement FirstName => driver.FindElement(By.XPath("//*[@id='firstname']"));
         IWebElement LastName => driver.FindElement(By.XPath("//*[@id='lastname']"));
@@ -35,19 +35,15 @@ namespace Verifone.PageObject
         IWebElement Address => driver.FindElement(By.XPath("//*[@id='address1']"));
         IWebElement City => driver.FindElement(By.XPath("//*[@id='city']"));
         IWebElement Postcode => driver.FindElement(By.XPath("//*[@id='postcode']"));
-        IWebElement State => driver.FindElement(By.XPath("//*[@id='id_state']"));
-        IWebElement Country => driver.FindElement(By.XPath("//*[@id='id_country']"));
+        IWebElement SelectState => driver.FindElement(By.XPath("//*[@id='id_state']"));
+        IWebElement SelectCountry => driver.FindElement(By.XPath("//*[@id='id_country']"));
         IWebElement HomePhone => driver.FindElement(By.XPath("//*[@id='phone']"));
         IWebElement MobilePhone => driver.FindElement(By.XPath("//*[@id='phone_mobile']"));
         IWebElement Alias => driver.FindElement(By.XPath("//*[@id='alias']"));
         IWebElement Register => driver.FindElement(By.XPath("//*[@id='submitAccount']/span"));
         
 
-
-        public IWebElement SelectYears { get; private set; }
-        public IWebElement SelectMonth { get; private set; }
-        public IWebElement SelectDays { get; private set; }
-        public IWebElement SelectState { get; private set; }
+      
 
 
         public void IClickSignIn()
@@ -99,17 +95,14 @@ namespace Verifone.PageObject
             Thread.Sleep(5000);
             SelectElement select = new SelectElement(SelectDays);
             select.SelectByValue("5");
-            Days.Click();
-            Thread.Sleep(5000);
         }
 
         public void ISelectMonth()
         {
-            Month.Clear();
             Thread.Sleep(5000);
             SelectElement select = new SelectElement(SelectMonth);
             select.SelectByValue("3");
-            Month.Click();
+            
         }
 
         public void ISelectYears()
@@ -117,16 +110,15 @@ namespace Verifone.PageObject
             Thread.Sleep(5000);
             SelectElement select = new SelectElement(SelectYears);
             select.SelectByValue("2014");
-            Years.Click();
+            
         }
 
-        public void IClickState()
+        public void ISelectState()
         {
-            //State.Clear();
             Thread.Sleep(5000);
             SelectElement select = new SelectElement(SelectState);
             select.SelectByValue("3");
-            State.Click();
+            
         }
 
         public void ISelectCountry()
@@ -134,7 +126,7 @@ namespace Verifone.PageObject
             Thread.Sleep(5000);
             SelectElement select = new SelectElement(SelectState);
             select.SelectByValue("21");
-            Country.Click();
+            
         }
         
         public void IClickNewsletters()

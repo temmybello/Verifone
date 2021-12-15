@@ -132,7 +132,7 @@ namespace Verifone.StepDefinition
         [Given(@"I select state")]
         public void GivenISelectState()
         {
-            vertoneCheckoutPage.IClickState();
+            vertoneCheckoutPage.ISelectState();
         }
 
         [Given(@"I Select country")]

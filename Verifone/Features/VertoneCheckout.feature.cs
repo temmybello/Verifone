@@ -129,6 +129,15 @@ this.ScenarioInitialize(scenarioInfo);
 #line 15
  testRunner.And("I enter password \"Homes121\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
+#line 16
+ testRunner.And("I click day", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 17
+ testRunner.And("I Select Month", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 18
+ testRunner.And("I Select Year", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
 #line 19
  testRunner.And("I click Sign up for our newsletter", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
@@ -147,8 +156,14 @@ this.ScenarioInitialize(scenarioInfo);
 #line 24
  testRunner.And("I enter city \"Leyton\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
+#line 25
+ testRunner.And("I select state", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
 #line 26
  testRunner.And("I enter Postal code \"Sw23dl\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 27
+ testRunner.And("I Select country", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 28
  testRunner.And("I enter Home phone", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
